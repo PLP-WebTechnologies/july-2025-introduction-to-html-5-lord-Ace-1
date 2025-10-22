@@ -4,20 +4,71 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>My Web Project</title>
+  
+  <title>Accessible and Semantic HTML5 Web Page</title>
+  <meta name="description" content="A fully semantic and accessible HTML5 template designed for SEO and screen reader navigation." />
+  <meta name="author" content="Your Name" />
+  <meta name="robots" content="index, follow" />
+  
 </head>
 <body>
 
-  <header>
-    <h1>Welcome to My Web Project</h1>
+  <!-- Skip link for keyboard users -->
+  <a href="#main-content" class="skip-link" tabindex="0">Skip to main content</a>
+
+  <!-- Site Header -->
+  <header role="banner">
+    <h1>My Semantic HTML5 Web Page</h1>
+    <p>Creating accessible and SEO-friendly content with clean structure</p>
   </header>
 
-  <main>
-    <p>Let's build something awesome.</p>
+  <!-- Navigation -->
+  <nav role="navigation" aria-label="Main navigation">
+    <ul>
+      <li><a href="#main-content">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#articles">Articles</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Main Content -->
+  <main id="main-content" role="main">
+    
+    <!-- About Section -->
+    <section id="about" aria-labelledby="about-heading">
+      <h2 id="about-heading">About This Page</h2>
+      <p>This page demonstrates the use of HTML5 semantic elements to create a well-structured, accessible, and SEO-optimized webpage. It avoids unnecessary elements and focuses on meaningful structure.</p>
+    </section>
+
+    <!-- Articles Section -->
+    <section id="articles" aria-labelledby="articles-heading">
+      <h2 id="articles-heading">Latest Articles</h2>
+      
+      <article aria-labelledby="article-1-title">
+        <h3 id="article-1-title">Why Semantic HTML Matters</h3>
+        <p>Semantic HTML improves accessibility, SEO, and code maintainability. By using tags like <code>&lt;article&gt;</code> and <code>&lt;section&gt;</code>, developers provide meaning to both users and machines.</p>
+      </article>
+
+      <article aria-labelledby="article-2-title">
+        <h3 id="article-2-title">Accessibility Basics in Web Development</h3>
+        <p>Accessibility ensures that web content is usable by people with disabilities. This includes screen reader support, keyboard navigation, and semantic landmarks that help assistive technologies.</p>
+      </article>
+    </section>
+
+    <!-- Sidebar (Optional) -->
+    <aside aria-labelledby="newsletter-title">
+      <h2 id="newsletter-title">Newsletter Signup</h2>
+      <p>Subscribe to receive updates and tips about semantic HTML and web accessibility.</p>
+    </aside>
+
   </main>
 
-  <footer>
-    <p>&copy; 2025 My Name</p>
+  <!-- Footer -->
+  <footer role="contentinfo">
+    <p>&copy; 2025 Your Name. All rights reserved.</p>
+    <p><a href="#main-content">Back to top</a></p>
   </footer>
+
 </body>
 </html>
